@@ -66,7 +66,7 @@ section{padding-block:clamp(var(--space-16),9vw,var(--space-32))}
 .nav.scrolled{border-bottom-color:var(--color-divider);background:rgba(242,237,226,.92)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
 .brand{display:flex;align-items:center;gap:var(--space-3);font-family:var(--font-display);font-weight:600;font-size:var(--text-lg);color:var(--color-text);text-decoration:none}
-.brand-mark{width:36px;height:36px;border-radius:9px;background:var(--color-primary);display:grid;place-items:center;box-shadow:var(--shadow-sm)}
+.brand-icon{width:36px;height:36px;border-radius:9px;box-shadow:var(--shadow-sm);display:block}
 .nav-links{display:flex;align-items:center;gap:var(--space-6);font-size:var(--text-sm);color:var(--color-text-muted)}
 .nav-links a{color:inherit;text-decoration:none}
 .nav-links a:hover{color:var(--color-text)}
@@ -103,27 +103,33 @@ section{padding-block:clamp(var(--space-16),9vw,var(--space-32))}
 .hero-meta b{display:block;font-family:var(--font-display);font-size:var(--text-lg);color:var(--color-text);font-weight:600;font-variant-numeric:tabular-nums}
 
 /* ---------- iPhone mockup ---------- */
+/* Real iPhone 15 Pro Max screen ratio: 1290/2796 ≈ 0.4614
+   App Store screenshots are 600x1299 = same ratio.
+   Bezel adds ~12px on every side, so device aspect ≈ (w+24)/(h+24). */
 .phone{
-  --phone-w:320px;
-  width:var(--phone-w);aspect-ratio:320/660;position:relative;margin-inline:auto;
-  border-radius:48px;
-  background:linear-gradient(160deg,#1c1c1e 0%,#2a2a2c 50%,#0e0e10 100%);
-  padding:11px;
+  --phone-w:300px;
+  width:var(--phone-w);
+  aspect-ratio:300/641;            /* matches screen + bezel */
+  position:relative;margin-inline:auto;
+  border-radius:46px;
+  background:linear-gradient(165deg,#1c1c1e 0%,#2a2a2c 45%,#0a0a0c 100%);
+  padding:10px;
   box-shadow:var(--shadow-phone);
+  transition:transform .8s cubic-bezier(.16,1,.3,1);
 }
-.phone.tilt{transform:perspective(1200px) rotateY(-8deg) rotateX(4deg)}
-.phone.tilt-r{transform:perspective(1200px) rotateY(8deg) rotateX(4deg)}
-.phone::before{content:"";position:absolute;inset:6px;border-radius:42px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,0) 40%);pointer-events:none}
-.phone::after{content:"";position:absolute;inset:0;border-radius:48px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.08),inset 0 0 0 3px rgba(0,0,0,.5);pointer-events:none}
-.phone-screen{position:relative;width:100%;height:100%;border-radius:38px;overflow:hidden;background:var(--color-bg);isolation:isolate}
-.phone-status{position:absolute;top:0;left:0;right:0;height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:13px;font-weight:600;color:var(--color-text);z-index:5;pointer-events:none}
-.phone-island{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:100px;height:28px;border-radius:14px;background:#0a0a0a;z-index:6}
-.phone-screen > img{width:100%;height:auto;display:block}
-.phone-bigger{--phone-w:360px}
-.phone-smaller{--phone-w:280px}
+.phone.tilt{transform:perspective(1400px) rotateY(-7deg) rotateX(3deg)}
+.phone.tilt-r{transform:perspective(1400px) rotateY(7deg) rotateX(3deg)}
+/* subtle highlight pass on the bezel */
+.phone::before{content:"";position:absolute;inset:4px;border-radius:42px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,0) 38%);pointer-events:none}
+/* crisp edge */
+.phone::after{content:"";position:absolute;inset:0;border-radius:46px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.10),inset 0 0 0 3px rgba(0,0,0,.55);pointer-events:none}
+.phone-screen{position:relative;width:100%;height:100%;border-radius:36px;overflow:hidden;background:#0a0a0a;isolation:isolate}
+.phone-screen > img{width:100%;height:100%;display:block;object-fit:cover;object-position:top center}
+.phone-bigger{--phone-w:340px}
+.phone-smaller{--phone-w:260px}
 
-@media (max-width:920px){.phone{--phone-w:280px}.phone.tilt,.phone.tilt-r{transform:none}}
-@media (max-width:480px){.phone{--phone-w:240px}}
+@media (max-width:920px){.phone{--phone-w:270px}.phone.tilt,.phone.tilt-r{transform:none}}
+@media (max-width:480px){.phone{--phone-w:230px}}
 
 /* ---------- BREW TIMER (hero animated) ---------- */
 .brew-card{position:relative;width:min(420px,100%);margin-inline:auto;background:var(--color-bg);border-radius:38px;padding:28px 22px 22px;border:1px solid var(--color-divider);box-shadow:var(--shadow-lg)}
@@ -139,10 +145,9 @@ section{padding-block:clamp(var(--space-16),9vw,var(--space-32))}
 .brew-last{display:flex;align-items:center;gap:.4rem;margin:var(--space-5) auto var(--space-4);padding:.45rem .9rem;background:rgba(216,207,184,.5);border-radius:999px;font-size:12px;color:var(--color-text-muted);width:fit-content}
 
 .brew-ring-wrap{position:relative;width:240px;height:240px;margin:var(--space-2) auto var(--space-5)}
-.brew-ring{transform:rotate(-90deg);width:100%;height:100%}
-.brew-ring-track{fill:none;stroke:rgba(216,207,184,.5);stroke-width:10}
-.brew-ring-progress{fill:none;stroke:var(--color-primary);stroke-width:10;stroke-linecap:round;stroke-dasharray:691.15;stroke-dashoffset:691.15;transition:stroke-dashoffset .12s linear}
-.brew-ring-tick{position:absolute;top:-2px;left:50%;transform-origin:50% 122px;width:18px;height:10px;margin-left:-9px;border-radius:5px;background:var(--color-primary);box-shadow:0 2px 6px rgba(184,92,46,.4)}
+.brew-ring{transform:rotate(-90deg);width:100%;height:100%;overflow:visible}
+.brew-ring-track{fill:none;stroke:rgba(216,207,184,.55);stroke-width:8}
+.brew-ring-progress{fill:none;stroke:var(--color-primary);stroke-width:8;stroke-linecap:butt;stroke-dasharray:691.15;stroke-dashoffset:691.15;transition:stroke-dashoffset .12s linear}
 .brew-time{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font-display);font-variant-numeric:tabular-nums}
 .brew-time-big{font-size:54px;font-weight:600;line-height:1;color:var(--color-text);letter-spacing:-.02em}
 .brew-time-ratio{font-size:18px;color:var(--color-text-muted);margin-top:4px;font-variant-numeric:tabular-nums}
@@ -180,12 +185,11 @@ section{padding-block:clamp(var(--space-16),9vw,var(--space-32))}
 .feature-card{padding:var(--space-6) 0}
 .feature-card.text-left{grid-column:span 6}
 .feature-card.phone-right{grid-column:span 6;display:flex;justify-content:center}
-.feature-card.text-right{grid-column:span 6;text-align:right}
+.feature-card.text-right{grid-column:span 6}
 .feature-card.phone-left{grid-column:span 6;display:flex;justify-content:center}
-.feature-card.text-right .feature-bullets{margin-left:auto}
 @media (max-width:920px){
-  .feature-card.text-left,.feature-card.text-right,.feature-card.phone-left,.feature-card.phone-right{grid-column:span 12;text-align:left}
-  .feature-card.text-right .feature-bullets{margin-left:0}
+  .feature-card.text-left,.feature-card.text-right,.feature-card.phone-left,.feature-card.phone-right{grid-column:span 12}
+  .feature-card.phone-left{order:-1}
 }
 
 .feature-num{font-family:var(--font-display);font-style:italic;font-size:var(--text-lg);color:var(--color-primary);opacity:.7}
@@ -231,6 +235,26 @@ section{padding-block:clamp(var(--space-16),9vw,var(--space-32))}
 .equip-tile small{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
 .equip-tile p{margin-top:var(--space-3);font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.5}
 @media (max-width:560px){.equipment-list{grid-template-columns:1fr}}
+
+/* ---------- GALLERY ---------- */
+.gallery{position:relative;background:linear-gradient(180deg,var(--color-bg) 0%,var(--color-bg-warm) 100%);overflow:hidden}
+.gallery::before{content:"";position:absolute;inset:auto -10% -20% -10%;height:60%;background:radial-gradient(ellipse at center top,rgba(184,92,46,.10),transparent 65%);pointer-events:none}
+.gallery-track{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(var(--space-3),1.5vw,var(--space-5));margin-top:clamp(var(--space-10),6vw,var(--space-16));position:relative;z-index:1}
+.shot{display:flex;flex-direction:column;align-items:center;gap:var(--space-3);margin:0;text-align:center}
+.shot img{width:100%;height:auto;display:block;border-radius:22px;border:1px solid var(--color-divider);box-shadow:var(--shadow-md);background:#000;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s ease}
+.shot:hover img{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.shot figcaption{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+@media (max-width:1100px){.gallery-track{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.gallery-track{grid-template-columns:repeat(2,1fr);gap:var(--space-3)}.shot img{border-radius:16px}}
+/* stagger reveal on shots */
+.js .gallery-track.in .shot{opacity:0;transform:translateY(20px);animation:shotIn .7s cubic-bezier(.16,1,.3,1) forwards}
+.gallery-track.in .shot:nth-child(1){animation-delay:.05s}
+.gallery-track.in .shot:nth-child(2){animation-delay:.12s}
+.gallery-track.in .shot:nth-child(3){animation-delay:.19s}
+.gallery-track.in .shot:nth-child(4){animation-delay:.26s}
+.gallery-track.in .shot:nth-child(5){animation-delay:.33s}
+.gallery-track.in .shot:nth-child(6){animation-delay:.40s}
+@keyframes shotIn{to{opacity:1;transform:translateY(0)}}
 
 /* ---------- CTA / FINAL ---------- */
 .final-cta{text-align:center;padding-block:clamp(var(--space-20),12vw,var(--space-32))}

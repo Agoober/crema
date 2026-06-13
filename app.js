@@ -59,7 +59,6 @@
 
   /* ---------- BREW TIMER simulation ---------- */
   const ringProgress = document.getElementById('ringProgress');
-  const ringTick = document.getElementById('ringTick');
   const timeDisplay = document.getElementById('timeDisplay');
   const ratioDisplay = document.getElementById('ratioDisplay');
   const stateDisplay = document.getElementById('stateDisplay');
@@ -92,7 +91,6 @@
 
   function resetTimer() {
     ringProgress.style.strokeDashoffset = CIRCUMFERENCE;
-    ringTick.style.transform = 'rotate(0deg)';
     timeDisplay.textContent = '00.0';
     ratioDisplay.textContent = '1:—';
     liveRatio.textContent = '1:—';
@@ -143,7 +141,6 @@
     // ring progress
     const pct = clamped / TARGET_TIME;
     ringProgress.style.strokeDashoffset = CIRCUMFERENCE * (1 - pct);
-    ringTick.style.transform = `rotate(${pct * 360}deg)`;
     // yield + ratio + flow
     const y = yieldAt(clamped);
     const ratio = y === 0 ? 0 : y / DOSE;

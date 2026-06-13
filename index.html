@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23B85C2E'/%3E%3Cpath d='M9 11h11a4 4 0 0 1 0 8h-1.5a6 6 0 0 1-6 6h-1.5a6 6 0 0 1-6-6V11h4Zm11 2v4a2 2 0 0 0 0-4Z' fill='%23FBF7EE'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+<link rel="apple-touch-icon" href="./assets/app_icon_180.png">
 </head>
 <body>
 
@@ -21,11 +22,7 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="#top" class="brand" aria-label="Crema home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M6 10h14a4 4 0 0 1 0 8h-1.5a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6V10h1.5Zm14 2v4a2 2 0 0 0 0-4Z" fill="#FBF7EE"/>
-        </svg>
-      </span>
+      <img class="brand-icon" src="./assets/app_icon_64.png" alt="" width="36" height="36">
       <span>Crema</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
@@ -89,7 +86,6 @@
             <circle class="brew-ring-track" cx="120" cy="120" r="110"/>
             <circle class="brew-ring-progress" id="ringProgress" cx="120" cy="120" r="110"/>
           </svg>
-          <div class="brew-ring-tick" id="ringTick" style="transform:rotate(0deg)"></div>
           <div class="brew-time">
             <div class="brew-time-big" id="timeDisplay">00.0</div>
             <div class="brew-time-ratio" id="ratioDisplay">1:—</div>
@@ -158,30 +154,28 @@
       </div>
       <div class="feature-card phone-right reveal reveal-delay-1">
         <div class="phone tilt phone-scroll-tilt">
-          <div class="phone-island"></div>
           <div class="phone-screen">
-            <img src="./assets/screens/quicklog.jpg" alt="Crema Quick log screen showing Ethiopia Yirgacheffe with dose, yield, time, temp, pressure, rating, and flavor chips" loading="lazy">
+            <img src="./assets/screens/quicklog_store.jpg" alt="Crema Quick log screen showing flavor chips, rating arc and Log this shot button" loading="lazy">
           </div>
         </div>
       </div>
 
-      <!-- History -->
+      <!-- Bean history -->
       <div class="feature-card phone-left reveal">
         <div class="phone tilt-r phone-scroll-tilt">
-          <div class="phone-island"></div>
           <div class="phone-screen">
-            <img src="./assets/screens/history.jpg" alt="Crema History screen with shot ratings over time" loading="lazy">
+            <img src="./assets/screens/insights_store.jpg" alt="Crema Insights screen with 6-day streak, patterns, and the highest-rated shot for Ethiopia Yirgacheffe" loading="lazy">
           </div>
         </div>
       </div>
       <div class="feature-card text-right reveal reveal-delay-1">
         <div class="feature-num">02 — Bean history</div>
         <h3 class="feature-h">Watch each bag dial in.</h3>
-        <p class="feature-p">Every shot from a bag becomes a row in its journal — ratio, time, flavors, score. See the day-six bitter pull turn into a day-nine 9/10. Roast date and shots-remaining are tracked automatically.</p>
+        <p class="feature-p">Every shot from a bag becomes a row in its journal — ratio, time, flavors, score. See the day-six bitter pull turn into a day-nine 9/10. Roast date and shots-remaining tracked automatically.</p>
         <ul class="feature-bullets">
           <li>Roast-aging reminders — degas, peak, stale-by</li>
-          <li>Shots remaining estimated from dose</li>
-          <li>Bitter day shows next to caramel day — and you learn</li>
+          <li>Best ratio, best time, best grind — per bean</li>
+          <li>Per-bean recommendations from your own shots</li>
         </ul>
       </div>
     </div>
@@ -293,9 +287,8 @@
   <div class="container equipment-grid">
     <div class="reveal">
       <div class="phone tilt phone-scroll-tilt phone-bigger">
-        <div class="phone-island"></div>
         <div class="phone-screen">
-          <img src="./assets/screens/equipment.jpg" alt="Crema grinder edit screen showing Varia VS6 with grind range, RPM, and burr settings" loading="lazy">
+          <img src="./assets/screens/equipment_store.jpg" alt="Crema Equipment screen listing 9Barista, Breville Bambino Plus, Flair 58, and La Marzocco Linea Mini" loading="lazy">
         </div>
       </div>
     </div>
@@ -326,6 +319,44 @@
           <p>Manual lever · pressure profiled</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOT GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="reveal" style="max-width:42ch">
+      <span class="section-eyebrow">Inside the app</span>
+      <h2 class="section-h2">A pocket lab, <em>at home</em>.</h2>
+      <p class="section-lede">Every screen earns its tap. From a clean log entry to side-by-side bag comparisons, here's the whole loop.</p>
+    </div>
+
+    <div class="gallery-track reveal" aria-label="App screenshots">
+      <figure class="shot">
+        <img src="./assets/screens/welcome_store.jpg" alt="Crema welcome screen with ‘Log every shot’" loading="lazy">
+        <figcaption>Welcome</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="./assets/screens/brewtimer_store.jpg" alt="Crema Brew Timer with live ratio and flow rate" loading="lazy">
+        <figcaption>Brew Timer</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="./assets/screens/quicklog_store.jpg" alt="Crema Quick Log with rating arc and flavor chips" loading="lazy">
+        <figcaption>Quick Log</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="./assets/screens/insights_store.jpg" alt="Crema Insights with streaks and patterns" loading="lazy">
+        <figcaption>Insights</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="./assets/screens/editshot_store.jpg" alt="Crema Edit Shot with rating slider, flavor chips, dial-in adjustment" loading="lazy">
+        <figcaption>Edit a shot</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="./assets/screens/compare_store.jpg" alt="Crema Compare beans side-by-side" loading="lazy">
+        <figcaption>Compare</figcaption>
+      </figure>
     </div>
   </div>
 </section>
