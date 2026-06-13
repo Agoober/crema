@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crema — Dial in every shot</title>
+<meta name="description" content="Crema is an espresso brewing journal for iPhone. Log every shot, watch your sweet spot emerge, and dial in coffee the data-driven way.">
+<meta property="og:title" content="Crema — Dial in every shot">
+<meta property="og:description" content="An espresso brewing journal that turns your shots into insight. Built for iPhone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23B85C2E'/%3E%3Cpath d='M9 11h11a4 4 0 0 1 0 8h-1.5a6 6 0 0 1-6 6h-1.5a6 6 0 0 1-6-6V11h4Zm11 2v4a2 2 0 0 0 0-4Z' fill='%23FBF7EE'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="Crema home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 10h14a4 4 0 0 1 0 8h-1.5a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6V10h1.5Zm14 2v4a2 2 0 0 0 0-4Z" fill="#FBF7EE"/>
+        </svg>
+      </span>
+      <span>Crema</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#timer">Brew Timer</a>
+      <a href="#features">Features</a>
+      <a href="#insights">Insights</a>
+      <a href="#equipment">Equipment</a>
+    </nav>
+    <a class="nav-cta" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer">Get the app</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>For iPhone · Lifestyle</span>
+      <h1 class="h1 reveal in">Dial in <em>every</em> shot.</h1>
+      <p class="hero-sub reveal reveal-delay-1 in">A pocket brewing journal for espresso. Log dose, yield, time, and taste — then watch your sweet spot emerge.</p>
+
+      <div class="hero-ctas reveal reveal-delay-2 in">
+        <a class="btn-app" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer" aria-label="Download Crema on the App Store">
+          <svg class="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM260 116c25.6-30.4 23.3-58 22.5-67.9-22.6 1.3-48.7 15.4-63.6 32.7-16.4 18.5-26.1 41.4-24 67.4 24.4 1.9 46.7-10.6 65.1-32.2z"/></svg>
+          <span><span class="small">Download on the</span><span class="big">App Store</span></span>
+        </a>
+        <div class="qr-pill" aria-label="Scan to get Crema">
+          <img src="./assets/qrcode.png" alt="QR code linking to Crema on the App Store">
+          <span>Scan to install</span>
+        </div>
+      </div>
+
+      <div class="hero-meta reveal reveal-delay-3 in">
+        <div><b>Free</b><span>To install</span></div>
+        <div><b>iCloud</b><span>Syncs your library</span></div>
+        <div><b>Offline</b><span>Logs anywhere</span></div>
+      </div>
+    </div>
+
+    <!-- Brew timer card (animated) -->
+    <div class="hero-phone-wrap" id="timer">
+      <div class="brew-card" role="img" aria-label="Animated Crema brew timer demo">
+        <div class="brew-header">
+          <button class="brew-close" tabindex="-1" aria-hidden="true">Close</button>
+          <div class="brew-title">Brew Timer</div>
+          <div class="brew-spacer"></div>
+        </div>
+
+        <div class="brew-bean-label" id="brewState">Ready</div>
+        <div class="brew-bean">Ethiopia Yirgacheffe</div>
+        <div class="brew-bean-sub">Sample Roastery</div>
+
+        <div class="brew-last">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          Last: 18→36g · 42.0s · 7/10
+        </div>
+
+        <div class="brew-ring-wrap">
+          <svg class="brew-ring" viewBox="0 0 240 240" aria-hidden="true">
+            <circle class="brew-ring-track" cx="120" cy="120" r="110"/>
+            <circle class="brew-ring-progress" id="ringProgress" cx="120" cy="120" r="110"/>
+          </svg>
+          <div class="brew-ring-tick" id="ringTick" style="transform:rotate(0deg)"></div>
+          <div class="brew-time">
+            <div class="brew-time-big" id="timeDisplay">00.0</div>
+            <div class="brew-time-ratio" id="ratioDisplay">1:—</div>
+            <div class="brew-time-state" id="stateDisplay">TAP START</div>
+          </div>
+        </div>
+
+        <div class="brew-stats">
+          <div class="brew-stat">
+            <div class="brew-stat-label">Live ratio</div>
+            <div class="brew-stat-val active" id="liveRatio">1:—</div>
+          </div>
+          <div class="brew-stat">
+            <div class="brew-stat-label">Flow rate</div>
+            <div class="brew-stat-val" id="flowRate">—</div>
+          </div>
+        </div>
+
+        <div class="brew-fields">
+          <div class="brew-field-row">
+            <div class="brew-field"><span class="brew-field-label">Dose (g)</span><span class="brew-field-val">18.0</span></div>
+            <div class="brew-field"><span class="brew-field-label">Target Yield (g)</span><span class="brew-field-val">36.0</span></div>
+          </div>
+          <div class="brew-field-row">
+            <div class="brew-field"><span class="brew-field-label">Target Time (s)</span><span class="brew-field-val">42.0</span></div>
+            <div class="brew-field"><span class="brew-field-label">Grind Setting</span><span class="brew-field-val">16.0</span></div>
+          </div>
+        </div>
+
+        <button class="brew-btn" id="brewBtn" type="button">
+          <span class="icon play" aria-hidden="true"></span>
+          <span id="brewBtnLabel">Start</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES GRID -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="reveal" style="max-width:38ch">
+      <span class="section-eyebrow">The workflow</span>
+      <h2 class="section-h2">Every pull, <em>recorded</em>. Every bean, <em>understood</em>.</h2>
+      <p class="section-lede">Crema is the journal you wished you'd been keeping — Quick Log, Brew Timer, History, and Insights all in one tap.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Quick Log -->
+      <div class="feature-card text-left reveal">
+        <div class="feature-num">01 — Quick log</div>
+        <h3 class="feature-h">Dose, yield, grind, taste — in seconds.</h3>
+        <p class="feature-p">Set your grinder and machine once. Every shot is a few taps after that. Flavor chips, a 10-point rating slider, and notes you'll actually re-read.</p>
+
+        <div class="chips reveal" aria-label="Flavor tags">
+          <span class="chip">Floral</span>
+          <span class="chip">Fruity</span>
+          <span class="chip">Citrus</span>
+          <span class="chip">Berry</span>
+          <span class="chip">Stonefruit</span>
+          <span class="chip">Chocolate</span>
+          <span class="chip active">Caramel</span>
+          <span class="chip">Nutty</span>
+          <span class="chip">Earthy</span>
+        </div>
+      </div>
+      <div class="feature-card phone-right reveal reveal-delay-1">
+        <div class="phone tilt phone-scroll-tilt">
+          <div class="phone-island"></div>
+          <div class="phone-screen">
+            <img src="./assets/screens/quicklog.jpg" alt="Crema Quick log screen showing Ethiopia Yirgacheffe with dose, yield, time, temp, pressure, rating, and flavor chips" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- History -->
+      <div class="feature-card phone-left reveal">
+        <div class="phone tilt-r phone-scroll-tilt">
+          <div class="phone-island"></div>
+          <div class="phone-screen">
+            <img src="./assets/screens/history.jpg" alt="Crema History screen with shot ratings over time" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="feature-card text-right reveal reveal-delay-1">
+        <div class="feature-num">02 — Bean history</div>
+        <h3 class="feature-h">Watch each bag dial in.</h3>
+        <p class="feature-p">Every shot from a bag becomes a row in its journal — ratio, time, flavors, score. See the day-six bitter pull turn into a day-nine 9/10. Roast date and shots-remaining are tracked automatically.</p>
+        <ul class="feature-bullets">
+          <li>Roast-aging reminders — degas, peak, stale-by</li>
+          <li>Shots remaining estimated from dose</li>
+          <li>Bitter day shows next to caramel day — and you learn</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS / SWEET SPOT -->
+<section id="insights">
+  <div class="container">
+    <div class="insights">
+      <div class="insights-grid">
+        <div>
+          <span class="section-eyebrow">Insights</span>
+          <h2 class="section-h2">Your <em>sweet spot</em>, plotted.</h2>
+          <p class="section-lede">Crema reads your library and surfaces the patterns you'd never spot in a spreadsheet — best ratio, best time, where your grind clusters when the rating spikes.</p>
+
+          <div class="insight-tips">
+            <div class="tip">
+              <span class="bulb" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2v.3h6v-.3c0-.7.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
+              </span>
+              <div><b>Best time on this bean was 34.0s</b> — speed up extraction by loosening grind.</div>
+            </div>
+            <div class="tip">
+              <span class="bulb" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2v.3h6v-.3c0-.7.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
+              </span>
+              <div><b>This bag is 39 days off roast</b> — flavor may be flattening. Grind a touch finer to compensate.</div>
+            </div>
+            <div class="tip">
+              <span class="bulb" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2v.3h6v-.3c0-.7.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
+              </span>
+              <div><b>Your shots rate higher 8–21 days off roast.</b> Try resting fresh bags before pulling.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="scatter-card">
+            <div class="scatter-head">
+              <div class="scatter-title">Sweet-spot overlay</div>
+              <div class="scatter-sub">grind vs rating</div>
+            </div>
+
+            <svg class="scatter-svg" id="scatterSvg" viewBox="0 0 360 240" aria-label="Sweet-spot scatter chart comparing two beans on grind size versus rating">
+              <!-- grid -->
+              <g stroke="#E4DCC9" stroke-width="1" stroke-dasharray="2 4">
+                <line x1="30" y1="40" x2="340" y2="40"/>
+                <line x1="30" y1="100" x2="340" y2="100"/>
+                <line x1="30" y1="160" x2="340" y2="160"/>
+                <line x1="100" y1="20" x2="100" y2="200"/>
+                <line x1="170" y1="20" x2="170" y2="200"/>
+                <line x1="240" y1="20" x2="240" y2="200"/>
+                <line x1="310" y1="20" x2="310" y2="200"/>
+              </g>
+              <!-- axes labels -->
+              <g font-family="Inter,sans-serif" font-size="10" fill="#6E665A">
+                <text x="345" y="44" text-anchor="start">10</text>
+                <text x="345" y="104" text-anchor="start">5</text>
+                <text x="345" y="204" text-anchor="start">0</text>
+                <text x="30" y="218" text-anchor="middle">0</text>
+                <text x="100" y="218" text-anchor="middle">5</text>
+                <text x="170" y="218" text-anchor="middle">10</text>
+                <text x="240" y="218" text-anchor="middle">15</text>
+                <text x="310" y="218" text-anchor="middle">20</text>
+              </g>
+              <!-- Bean A: Ethiopia (orange circles) -->
+              <g fill="#B85C2E">
+                <circle class="scatter-dot" cx="225" cy="60" r="7" style="animation-delay:.05s"/>
+                <circle class="scatter-dot" cx="195" cy="70" r="7" style="animation-delay:.10s"/>
+                <circle class="scatter-dot" cx="210" cy="78" r="7" style="animation-delay:.15s"/>
+                <circle class="scatter-dot" cx="245" cy="75" r="7" style="animation-delay:.20s"/>
+                <circle class="scatter-dot" cx="175" cy="100" r="6" style="animation-delay:.25s"/>
+                <circle class="scatter-dot" cx="255" cy="92" r="6" style="animation-delay:.30s"/>
+              </g>
+              <!-- Bean B: S Chocolate (teal squares) -->
+              <g fill="#2F7A75">
+                <rect class="scatter-dot" x="125" y="64" width="13" height="13" rx="2" style="animation-delay:.40s"/>
+                <rect class="scatter-dot" x="145" y="86" width="12" height="12" rx="2" style="animation-delay:.46s"/>
+                <rect class="scatter-dot" x="130" y="98" width="11" height="11" rx="2" style="animation-delay:.52s"/>
+                <rect class="scatter-dot" x="160" y="92" width="12" height="12" rx="2" style="animation-delay:.58s"/>
+                <rect class="scatter-dot" x="170" y="106" width="10" height="10" rx="2" style="animation-delay:.64s"/>
+                <rect class="scatter-dot" x="85"  y="148" width="11" height="11" rx="2" style="animation-delay:.70s"/>
+              </g>
+              <!-- highlight cluster circles -->
+              <g fill="none" stroke="#B85C2E" stroke-dasharray="3 3" opacity=".35">
+                <ellipse class="scatter-dot" cx="215" cy="78" rx="42" ry="22" style="animation-delay:.78s"/>
+              </g>
+              <g fill="none" stroke="#2F7A75" stroke-dasharray="3 3" opacity=".35">
+                <ellipse class="scatter-dot" cx="142" cy="92" rx="36" ry="24" style="animation-delay:.86s"/>
+              </g>
+            </svg>
+
+            <div class="scatter-legend">
+              <span><i style="background:#B85C2E"></i> Ethiopia Yirgacheffe</span>
+              <span><i style="background:#2F7A75;border-radius:2px"></i> S Chocolate</span>
+            </div>
+            <p class="scatter-caption">Bigger marks mean higher ratings. Where each bean's marks cluster on the X-axis is its grind sweet spot.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPMENT -->
+<section class="equipment" id="equipment">
+  <div class="container equipment-grid">
+    <div class="reveal">
+      <div class="phone tilt phone-scroll-tilt phone-bigger">
+        <div class="phone-island"></div>
+        <div class="phone-screen">
+          <img src="./assets/screens/equipment.jpg" alt="Crema grinder edit screen showing Varia VS6 with grind range, RPM, and burr settings" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <span class="section-eyebrow">Equipment</span>
+      <h2 class="section-h2">Built around <em>your</em> setup.</h2>
+      <p class="section-lede">Crema knows the difference between a Niche Zero clicking from 10 to 16 and a Varia VS6 humming at 1,000 rpm. Set up your grinder once — units, ranges, burrs, RPM — and every shot logs against it.</p>
+
+      <div class="equipment-list">
+        <div class="equip-tile">
+          <small>Grinder</small>
+          <h4>Varia VS6</h4>
+          <p>0–80, step 1 · 600–1,600 rpm · SSP Brew burrs</p>
+        </div>
+        <div class="equip-tile">
+          <small>Grinder</small>
+          <h4>Niche Zero</h4>
+          <p>0–50 dial · single dose · stock burrs</p>
+        </div>
+        <div class="equip-tile">
+          <small>Machine</small>
+          <h4>Breville Bambino+</h4>
+          <p>9 bar · 93°C · 18→36g in 30s</p>
+        </div>
+        <div class="equip-tile">
+          <small>Machine</small>
+          <h4>Flair 58</h4>
+          <p>Manual lever · pressure profiled</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <span class="section-eyebrow reveal">Coffee, measured</span>
+    <h2 class="reveal reveal-delay-1">Stop guessing. <em>Start dialing</em>.</h2>
+    <p class="section-lede reveal reveal-delay-2" style="margin-inline:auto">Crema is free to install. Bring your beans, your gear, and your taste — we'll handle the journal.</p>
+
+    <div class="hero-ctas reveal reveal-delay-3">
+      <a class="btn-app" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer">
+        <svg class="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM260 116c25.6-30.4 23.3-58 22.5-67.9-22.6 1.3-48.7 15.4-63.6 32.7-16.4 18.5-26.1 41.4-24 67.4 24.4 1.9 46.7-10.6 65.1-32.2z"/></svg>
+        <span><span class="small">Download on the</span><span class="big">App Store</span></span>
+      </a>
+      <div class="qr-pill"><img src="./assets/qrcode.png" alt="QR code linking to Crema on the App Store"><span>Scan to install</span></div>
+    </div>
+
+    <div class="signoff">A brewing journal · For iPhone</div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <span>© 2026 Crema · Built by Zhifan Liang</span>
+    <span><a href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer">View on the App Store →</a></span>
+  </div>
+</footer>
+
+<script src="./app.js" defer></script>
+</body>
+</html>
