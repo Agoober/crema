@@ -2,472 +2,348 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Crema — Your espresso coach</title>
-<meta name="description" content="Crema is an espresso journal that tells you what to try next. A dial-in coach, a starting recipe for every new bag, Apple Watch, widgets and Siri — private, on your iPhone and iPad.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Crema — Dial in every shot</title>
+<meta name="description" content="Crema is an espresso journal that tells you what to try next. A dial-in coach, a starting recipe for every new bag, foldable iPhone layouts, Apple Watch, widgets and Siri. Private, free, no account.">
 <meta property="og:title" content="Crema — Dial in every shot">
-<meta property="og:description" content="An espresso journal that tells you what to try next. iPhone, iPad, Apple Watch.">
+<meta property="og:description" content="The espresso journal that tells you what to try next. iPhone, foldable iPhone, iPad, Apple Watch and Mac.">
+<meta property="og:image" content="./assets/app_icon.png">
+<meta name="theme-color" content="#170F0B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Schibsted+Grotesk:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="./style.css">
-<script>document.documentElement.classList.add('js')</script>
+<script>
+  (function(){var d=document.documentElement;d.classList.add('js');
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('motion');})();
+</script>
 <link rel="icon" type="image/png" href="./assets/favicon.png">
 <link rel="apple-touch-icon" href="./assets/app_icon_180.png">
 </head>
 <body>
 
-<!-- NAV -->
-<header class="nav" id="nav">
-  <div class="container nav-inner">
-    <a href="#top" class="brand" aria-label="Crema home">
-      <img class="brand-icon" src="./assets/app_icon_64.png" alt="" width="36" height="36">
-      <span>Crema</span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#timer">Brew Timer</a>
-      <a href="#coach">Coach</a>
-      <a href="#features">Journal</a>
-      <a href="#everywhere">Watch &amp; Siri</a>
-      <a href="#insights">Insights</a>
-    </nav>
-    <a class="nav-cta" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer">Get the app</a>
-  </div>
+<a class="skip" href="#coach">Skip the shot animation</a>
+
+<header class="nav">
+  <a href="#top" class="brand" aria-label="Crema, back to top">
+    <img src="./assets/app_icon_64.png" alt="" width="32" height="32">
+    <span>Crema</span>
+  </a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#coach">Coach</a>
+    <a href="#fold">Foldable</a>
+    <a href="#everywhere">Watch &amp; Siri</a>
+    <a href="#week">Your week</a>
+  </nav>
+  <a class="nav-cta" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer">Get Crema</a>
 </header>
 
-<main id="top">
+<main>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
+<!-- ============ SCENE 1: THE PULL ============ -->
+<section class="scene pull" id="top" data-scene="pull" aria-label="Pull a shot with Crema">
+  <div class="stage">
+    <div class="pull-text">
+      <div class="beat" data-beat="0">
+        <h1>Dial in every shot.</h1>
+        <p class="lede">Crema is an espresso journal that tells you what to try next. Pull a shot, say how it tasted, and get one clear change for the next one.</p>
+        <div class="cta-row">
+          <a class="btn-app" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer" aria-label="Download Crema on the App Store">
+            <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM260 116c25.6-30.4 23.3-58 22.5-67.9-22.6 1.3-48.7 15.4-63.6 32.7-16.4 18.5-26.1 41.4-24 67.4 24.4 1.9 46.7-10.6 65.1-32.2z"/></svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <p class="cta-note">Free, every feature. No account.</p>
+        </div>
+      </div>
+      <div class="beat" data-beat="1">
+        <h2>Start the timer and pull.</h2>
+        <p>A big dial with haptic checkpoints, and the shot on your Lock Screen and Dynamic Island. Minimize it to a bar and keep using the app.</p>
+      </div>
+      <div class="beat" data-beat="2">
+        <h2>Say how it tasted.</h2>
+        <p>Enter the yield when you stop, then place it between sour and bitter and give it a score. Or leave it unrated, and it stays out of your averages.</p>
+      </div>
+      <div class="beat" data-beat="3">
+        <h2>Get one change for the next shot.</h2>
+        <p>The coach weighs how it tasted, how it ran, your basket and your best shot so far, and names the number on your grinder. It runs on your device.</p>
+      </div>
+    </div>
+
+    <div class="pull-visual">
+      <div class="cup-wrap">
+        <canvas id="cup" aria-hidden="true"></canvas>
+      </div>
+      <div class="panel-slot">
+        <div class="readout" aria-label="Shot readout: 18 grams in, 34 grams out in 22.4 seconds">
+          <div class="clock"><span id="r-time">22.4</span><span class="unit">s</span></div>
+          <dl class="figures">
+            <div><dt>In</dt><dd>18.0 g</dd></div>
+            <div><dt>Out</dt><dd><span id="r-yield">34.0</span> g</dd></div>
+            <div><dt>Ratio</dt><dd>1:<span id="r-ratio">1.9</span></dd></div>
+            <div><dt>Flow</dt><dd><span id="r-flow">1.9</span> g/s</dd></div>
+          </dl>
+        </div>
+        <div class="taste" aria-label="Rated sour, 6 out of 10">
+          <div class="taste-scale">
+            <span>Sour</span>
+            <div class="track"><span class="sweet" aria-hidden="true"></span><i class="marker"></i></div>
+            <span>Bitter</span>
+          </div>
+          <p class="score"><b>6</b>/10 &nbsp; Bright, a little thin</p>
+        </div>
+        <div class="coach-card">
+          <p class="coach-for">Next shot</p>
+          <p class="coach-move">Grind finer, to about <span class="dial"><span class="dial-from">16</span><span class="dial-to">15</span></span></p>
+          <p class="coach-why">Sour and fast: 22 seconds against a 30-second target. A finer grind slows the flow and pulls more sweetness.</p>
+        </div>
+      </div>
+    </div>
+    <p class="scroll-cue" aria-hidden="true"><span></span>Scroll to pull a shot</p>
+  </div>
+</section>
+
+<!-- ============ SCENE 2: THE PATH ============ -->
+<section class="scene path" id="coach" data-scene="path" aria-labelledby="path-h">
+  <div class="stage">
+    <div class="path-text">
+      <h2 id="path-h">Three shots to the sweet spot.</h2>
+      <p class="path-intro">Each bag's shots become a path. You can see which change helped, and Crema tells you when you've beaten your best.</p>
+      <ol class="steps">
+        <li data-step="1"><b>Grind 18, 21 seconds.</b> Sour. Rated 5.</li>
+        <li data-step="2"><b>Grind 16, 26 seconds.</b> Still a little sour. Rated 7.</li>
+        <li data-step="3"><b>Grind 15, 30 seconds.</b> Balanced. Rated 9.</li>
+      </ol>
+      <p class="best" data-step="4"><span class="best-mark" aria-hidden="true"></span>Best shot of this bag, found on shot 3.</p>
+    </div>
+    <figure class="plot">
+      <svg viewBox="0 0 520 400" role="img" aria-labelledby="plot-t">
+        <title id="plot-t">Three shots plotted from sour to bitter against rating. They move from sour and 5 out of 10 to balanced and 9 out of 10.</title>
+        <rect class="zone" x="214" y="24" width="92" height="320" rx="46"/>
+        <text class="zone-label" x="260" y="16" text-anchor="middle">Balanced</text>
+        <line class="axis" x1="30" y1="344" x2="490" y2="344"/>
+        <text class="axis-label" x="30" y="374">Sour</text>
+        <text class="axis-label" x="490" y="374" text-anchor="end">Bitter</text>
+        <g class="gridlines">
+          <line x1="30" y1="184" x2="490" y2="184"/><text x="496" y="188">5</text>
+          <line x1="30" y1="56" x2="490" y2="56"/><text x="496" y="60">9</text>
+        </g>
+        <path class="trail" d="M100 184 C 140 150, 160 130, 180 120 S 240 70, 262 56" pathLength="1"/>
+        <g class="pt" data-step="1"><circle cx="100" cy="184" r="9"/><text x="100" y="214" text-anchor="middle">18</text></g>
+        <g class="pt" data-step="2"><circle cx="180" cy="120" r="11"/><text x="180" y="150" text-anchor="middle">16</text></g>
+        <g class="pt best-pt" data-step="3"><circle class="halo" cx="262" cy="56" r="26"/><circle cx="262" cy="56" r="14"/><text x="262" y="96" text-anchor="middle">15</text></g>
+      </svg>
+      <figcaption>Taste from sour to bitter, against your rating. Labels are grind settings.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="after-path">
+  <div class="wrap two-up">
+    <article class="note">
+      <h3>A starting point for every new bag</h3>
+      <p>Open a new bag and Crema suggests the first dose, ratio, time and grind from your best shots on the same coffee, the same roaster, or the same roast.</p>
+      <dl class="recipe">
+        <div><dt>Dose</dt><dd>18.0 g</dd></div>
+        <div><dt>Ratio</dt><dd>1:2.0</dd></div>
+        <div><dt>Time</dt><dd>32 s</dd></div>
+        <div><dt>Grind</dt><dd>16</dd></div>
+      </dl>
+    </article>
+    <article class="note">
+      <h3>It learns your grinder</h3>
+      <p>Tell Crema which way finer turns on each grinder, and the coach names the next number based on how that grinder has actually responded. It won't overshoot from sour to bitter, and it drops advice that hasn't worked twice.</p>
+      <p class="quiet">Beyond grind, it can suggest ratio, pre-infusion, dose for your basket, puck prep or temperature. Every claim says how many shots it's based on.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SCENE 3: THE FOLD ============ -->
+<section class="scene fold" id="fold" data-scene="fold" aria-labelledby="fold-h">
+  <div class="stage">
+    <div class="fold-text">
+      <h2 id="fold-h">Open it up.</h2>
+      <p>On a foldable iPhone, Crema uses both halves. Pick a bag on one side and see its dial-in path, starting recipe and next step on the other.</p>
+      <p>Drag a shot across the fold to compare it with your latest. The brew timer sits beside a step-by-step guide, and nothing ever sits on the crease.</p>
+    </div>
+    <div class="duo-wrap" aria-hidden="true">
+      <div class="duo">
+        <div class="half half-l screen">
+          <p class="scr-title">Beans</p>
+          <ul class="shelf">
+            <li class="on"><b>Ethiopia Yirgacheffe</b><span>Sample Roastery, 21 days off roast</span></li>
+            <li><b>Brazil Cerrado Natural</b><span>Hilltop Roasters, 12 days</span></li>
+            <li><b>Colombia Huila</b><span>Northside Coffee, 30 days</span></li>
+            <li><b>Kenya Nyeri</b><span>In the freezer</span></li>
+          </ul>
+          <p class="scr-sub">Shots</p>
+          <ul class="shots">
+            <li class="shot-src"><span class="dot bal"></span>Grind 15, 30 s <em>9</em></li>
+            <li><span class="dot sour"></span>Grind 16, 26 s <em>7</em></li>
+            <li><span class="dot sour"></span>Grind 18, 21 s <em>5</em></li>
+          </ul>
+        </div>
+        <div class="crease"></div>
+        <div class="half half-r">
+          <div class="face front screen">
+            <p class="scr-title serif">Ethiopia Yirgacheffe</p>
+            <p class="scr-sub">Dial-in path</p>
+            <div class="mini-path"><span class="sour">18</span><i></i><span class="sour">16</span><i></i><span class="bal">15</span></div>
+            <p class="scr-sub">Starting recipe</p>
+            <p class="mini-recipe">18.0 g in, 1:2.1, 30 s, grind 15</p>
+            <div class="next"><span>Next step</span><b>Keep grind 15</b></div>
+            <div class="drop">
+              <span class="drop-empty">Drop a shot here to compare</span>
+              <span class="drop-full"><b>+2</b> rating against your latest, 3.6 s longer</span>
+            </div>
+          </div>
+          <div class="face back">
+            <span class="cov-time">7:42</span>
+            <span class="cov-bean">Ethiopia Yirgacheffe</span>
+            <span class="cov-days">21 days off roast</span>
+          </div>
+        </div>
+        <div class="drag-chip"><span class="dot bal"></span>Grind 15, 30 s <em>9</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVERYWHERE ============ -->
+<section class="everywhere" id="everywhere" aria-labelledby="ev-h">
+  <div class="wrap">
+    <h2 id="ev-h" class="section-h">Pull a shot without picking up your phone.</h2>
+    <div class="ev-grid">
+      <figure class="ev ev-watch">
+        <div class="watch" aria-hidden="true">
+          <div class="watch-face">
+            <svg viewBox="0 0 120 120" class="watch-ring"><circle cx="60" cy="60" r="50" class="ring-bg"/><circle cx="60" cy="60" r="50" class="ring-fg" pathLength="1"/></svg>
+            <div class="watch-read"><b>28.4</b><span>18 → 36 g</span></div>
+          </div>
+          <span class="crown"></span>
+        </div>
+        <figcaption><h3>On your wrist</h3><p>Run the timer on Apple Watch with haptics that keep counting while your wrist is down. Set the yield with the Digital Crown, rate the shot, and it lands in your iPhone log.</p></figcaption>
+      </figure>
+
+      <figure class="ev ev-lock">
+        <div class="lock" aria-hidden="true">
+          <div class="island"><span class="isl-dot"></span><span>00:24</span><span class="isl-bar"><i></i></span></div>
+          <div class="widget">
+            <p class="w-label">In the hopper</p>
+            <p class="w-bean">Ethiopia Yirgacheffe</p>
+            <p class="w-meta">21 days off roast, about 14 shots left</p>
+            <p class="w-next">Keep grind 15</p>
+          </div>
+        </div>
+        <figcaption><h3>Lock Screen, widgets and Control Center</h3><p>A Live Activity follows the shot. Pin any open bean to the Brew widget or let it follow your hopper, and start a shot from Control Center.</p></figcaption>
+      </figure>
+
+      <figure class="ev ev-siri">
+        <ul class="phrases" aria-label="Things you can say to Siri">
+          <li>“Tell Crema about my shot: 18 in, 40 out, 32 seconds, a bit bitter.”</li>
+          <li>“Repeat my last shot in Crema.”</li>
+          <li>“How should I dial in with Crema?”</li>
+        </ul>
+        <figcaption><h3>Siri and Shortcuts</h3><p>Log a shot in one sentence, repeat a recipe, or ask for the next step.</p></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ YOUR WEEK ============ -->
+<section class="week" id="week" aria-labelledby="week-h">
+  <div class="wrap week-grid">
+    <div class="phone">
+      <img src="./assets/screens/insights_store.jpg" alt="Crema's Insights tab showing a 9-day streak, patterns found across 27 shots, and a highest-rated shot of 10 out of 10." width="600" height="1299" loading="lazy">
+    </div>
+    <div class="week-text">
+      <h2 id="week-h" class="section-h">A reason to open it every morning.</h2>
+      <p>The Brew tab shows your last seven days and your streak. Insights recaps the week against the one before, and each bean page tells you how the bag went.</p>
+      <div class="days" aria-label="Shots per day this week">
+        <div style="--n:2"><i></i><span>M</span></div>
+        <div style="--n:1"><i></i><span>T</span></div>
+        <div style="--n:3"><i></i><span>W</span></div>
+        <div style="--n:2"><i></i><span>T</span></div>
+        <div style="--n:2"><i></i><span>F</span></div>
+        <div style="--n:4"><i></i><span>S</span></div>
+        <div style="--n:0" class="today"><i></i><span>S</span></div>
+      </div>
+      <dl class="recap">
+        <div><dt>Shots</dt><dd>14 <small>3 more than last week</small></dd></div>
+        <div><dt>Average rating</dt><dd>7.9 <small>up 0.4</small></dd></div>
+        <div><dt>Keepers</dt><dd>64% <small>up 9 points</small></dd></div>
+      </dl>
+      <p class="quiet">Insights also find the rest window when each roaster tastes best, what every shot costs, and where your grind settles when the rating climbs. Compare any two beans side by side.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE SMALL STUFF ============ -->
+<section class="small" aria-labelledby="small-h">
+  <div class="wrap small-grid">
     <div>
-      <span class="eyebrow"><span class="dot"></span>New in 1.8 · iPhone, iPad &amp; Watch</span>
-      <h1 class="h1 reveal in">Dial in <em>every</em> shot.</h1>
-      <p class="hero-sub reveal reveal-delay-1 in">The espresso journal that tells you what to try next. Pull a shot, tap once, and Crema turns your log into a clear next step — plus a starting recipe for every new bag.</p>
-
-      <div class="hero-ctas reveal reveal-delay-2 in">
-        <a class="btn-app" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer" aria-label="Download Crema on the App Store">
-          <svg class="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM260 116c25.6-30.4 23.3-58 22.5-67.9-22.6 1.3-48.7 15.4-63.6 32.7-16.4 18.5-26.1 41.4-24 67.4 24.4 1.9 46.7-10.6 65.1-32.2z"/></svg>
-          <span><span class="small">Download on the</span><span class="big">App Store</span></span>
-        </a>
-      </div>
-
-      <div class="hero-meta reveal reveal-delay-3 in">
-        <div><b>Watch</b><span>Pull a shot from your wrist</span></div>
-        <div><b>Private</b><span>No account, your own iCloud</span></div>
-        <div><b>11 languages</b><span>Localized</span></div>
-      </div>
+      <h2 id="small-h" class="section-h">Everything a barista keeps track of.</h2>
+      <dl class="details">
+        <div><dt>Log again</dt><dd>Repeat a shot's recipe in one tap and change only what was different.</dd></div>
+        <div><dt>Your setup</dt><dd>Presets for popular grinders and machines. Pre-infusion, basket, puck prep, water, drink type and grinder zero point.</dd></div>
+        <div><dt>Your bags</dt><dd>Freezer time doesn't count toward rest. A reminder to reorder when a weighed bag is down to its last few shots. Merge a duplicate bean in one step.</dd></div>
+        <div><dt>Your gear</dt><dd>Backflush, descale and burr-wear reminders, worked out from how much coffee went through.</dd></div>
+        <div><dt>Search</dt><dd>Find shots by bean, roaster, flavor or notes, or type a grind range like 14-18.</dd></div>
+        <div><dt>Your data</dt><dd>Import from a backup or another app's export. Back up everything, photos included, in one file, or export CSV.</dd></div>
+      </dl>
     </div>
-
-    <!-- Brew timer card (animated) -->
-    <div class="hero-phone-wrap" id="timer">
-      <div class="brew-card" role="img" aria-label="Animated Crema brew timer demo">
-        <div class="brew-header">
-          <button class="brew-close" tabindex="-1" aria-hidden="true">Close</button>
-          <div class="brew-title">Brew Timer</div>
-          <div class="brew-spacer"></div>
-        </div>
-
-        <div class="brew-bean-label" id="brewState">Ready</div>
-        <div class="brew-bean">Ethiopia Yirgacheffe</div>
-        <div class="brew-bean-sub">Sample Roastery</div>
-
-        <div class="brew-last">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          Last: 18→36g · 42.0s · 7/10
-        </div>
-
-        <div class="brew-ring-wrap">
-          <svg class="brew-ring" viewBox="0 0 240 240" aria-hidden="true">
-            <circle class="brew-ring-track" cx="120" cy="120" r="110"/>
-            <circle class="brew-ring-progress" id="ringProgress" cx="120" cy="120" r="110"/>
-          </svg>
-          <div class="brew-time">
-            <div class="brew-time-big" id="timeDisplay">00.0</div>
-            <div class="brew-time-ratio" id="ratioDisplay">1:—</div>
-            <div class="brew-time-state" id="stateDisplay">TAP START</div>
-          </div>
-        </div>
-
-        <div class="brew-stats">
-          <div class="brew-stat">
-            <div class="brew-stat-label">Live ratio</div>
-            <div class="brew-stat-val active" id="liveRatio">1:—</div>
-          </div>
-          <div class="brew-stat">
-            <div class="brew-stat-label">Flow rate</div>
-            <div class="brew-stat-val" id="flowRate">—</div>
-          </div>
-        </div>
-
-        <div class="brew-fields">
-          <div class="brew-field-row">
-            <div class="brew-field"><span class="brew-field-label">Dose (g)</span><span class="brew-field-val">18.0</span></div>
-            <div class="brew-field"><span class="brew-field-label">Target Yield (g)</span><span class="brew-field-val">36.0</span></div>
-          </div>
-          <div class="brew-field-row">
-            <div class="brew-field"><span class="brew-field-label">Target Time (s)</span><span class="brew-field-val">42.0</span></div>
-            <div class="brew-field"><span class="brew-field-label">Grind Setting</span><span class="brew-field-val">16.0</span></div>
-          </div>
-        </div>
-
-        <button class="brew-btn" id="brewBtn" type="button">
-          <span class="icon play" aria-hidden="true"></span>
-          <span id="brewBtnLabel">Start</span>
-        </button>
+    <figure class="share">
+      <div class="share-card" aria-hidden="true">
+        <img src="./assets/app_icon_64.png" alt="" width="28" height="28">
+        <p class="sc-bean">Ethiopia Yirgacheffe</p>
+        <p class="sc-roaster">Sample Roastery</p>
+        <dl>
+          <div><dt>In</dt><dd>18.0 g</dd></div>
+          <div><dt>Out</dt><dd>38.0 g</dd></div>
+          <div><dt>Time</dt><dd>30 s</dd></div>
+          <div><dt>Grind</dt><dd>15</dd></div>
+        </dl>
+        <div class="sc-foot"><span class="qr"></span><span>Open this recipe in Crema</span></div>
       </div>
-    </div>
+      <figcaption>Share a recipe as a link, or as a card with a QR code that opens it in Crema.</figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- FEATURES GRID -->
-<section class="features" id="features">
-  <div class="container">
-    <div class="reveal" style="max-width:38ch">
-      <span class="section-eyebrow">The workflow</span>
-      <h2 class="section-h2">Every pull, <em>recorded</em>. Every bean, <em>understood</em>.</h2>
-      <p class="section-lede">Crema is the journal you wished you'd been keeping — a Brew home, Quick Log, History, and Insights, one tap apart.</p>
-    </div>
-
-    <div class="features-grid">
-      <!-- Quick Log -->
-      <div class="feature-card text-left reveal">
-        <div class="feature-num">01 — Quick log</div>
-        <h3 class="feature-h">Dose, yield, grind, taste — in seconds.</h3>
-        <p class="feature-p">Set your grinder and machine once — or pick a preset. Every shot is a few taps after that, and <b>Log again</b> repeats a recipe so you change only what was different. Flavor chips, a 10-point rating, sour↔bitter and thin↔heavy scales.</p>
-
-        <div class="chips reveal" aria-label="Flavor tags">
-          <span class="chip">Floral</span>
-          <span class="chip">Fruity</span>
-          <span class="chip">Citrus</span>
-          <span class="chip">Berry</span>
-          <span class="chip">Stonefruit</span>
-          <span class="chip">Chocolate</span>
-          <span class="chip active">Caramel</span>
-          <span class="chip">Nutty</span>
-          <span class="chip">Earthy</span>
-        </div>
-      </div>
-      <div class="feature-card phone-right reveal reveal-delay-1">
-        <div class="phone tilt phone-scroll-tilt">
-          <div class="phone-screen">
-            <img src="./assets/screens/quicklog_store.jpg" alt="Crema Quick log screen showing flavor chips, rating arc and Log this shot button" loading="lazy">
-          </div>
-        </div>
-      </div>
-
-      <!-- Bean history -->
-      <div class="feature-card phone-left reveal">
-        <div class="phone tilt-r phone-scroll-tilt">
-          <div class="phone-screen">
-            <img src="./assets/screens/insights_store.jpg" alt="Crema Insights screen with a 9-day streak, patterns, and the highest-rated shot for Ethiopia Yirgacheffe" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="feature-card text-right reveal reveal-delay-1">
-        <div class="feature-num">02 — Bean history</div>
-        <h3 class="feature-h">Watch each bag dial in.</h3>
-        <p class="feature-p">Every shot from a bag becomes a row in its journal — ratio, time, flavors, score. See the day-six bitter pull turn into a day-nine 9/10. Roast date and shots-remaining tracked automatically.</p>
-        <ul class="feature-bullets">
-          <li>Roast-aging reminders — degas, peak, stale-by</li>
-          <li>Freezer tracking pauses days off roast; finished bags tuck away</li>
-          <li>Origin, process, varietal, price — with cost per shot</li>
-          <li>Best ratio, best time, best grind — per bean</li>
-        </ul>
-      </div>
-    </div>
+<!-- ============ ICONS ============ -->
+<section class="icons" aria-labelledby="icons-h">
+  <div class="wrap">
+    <h2 id="icons-h" class="section-h">Eight icons. Pick the one that looks like your mornings.</h2>
+    <ul class="icon-row">
+      <li><img src="./assets/icons/espresso.jpg" alt="" width="96" height="96" loading="lazy"><span>Espresso</span></li>
+      <li><img src="./assets/icons/crema.jpg" alt="" width="96" height="96" loading="lazy"><span>Crema</span></li>
+      <li><img src="./assets/icons/midnight.jpg" alt="" width="96" height="96" loading="lazy"><span>Midnight</span></li>
+      <li><img src="./assets/icons/terracotta.jpg" alt="" width="96" height="96" loading="lazy"><span>Terracotta</span></li>
+      <li><img src="./assets/icons/verdant.jpg" alt="" width="96" height="96" loading="lazy"><span>Verdant</span></li>
+      <li><img src="./assets/icons/mono.jpg" alt="" width="96" height="96" loading="lazy"><span>Mono</span></li>
+      <li><img src="./assets/icons/boldbrew.jpg" alt="" width="96" height="96" loading="lazy"><span>Bold Brew</span></li>
+      <li><img src="./assets/icons/sunrise.jpg" alt="" width="96" height="96" loading="lazy"><span>Sunrise</span></li>
+    </ul>
   </div>
 </section>
 
-
-<!-- COACH (1.8) -->
-<section class="coach" id="coach">
-  <div class="container">
-    <div class="reveal" style="max-width:40ch">
-      <span class="section-eyebrow">The dial-in coach</span>
-      <h2 class="section-h2">A coach, <em>not a spreadsheet</em>.</h2>
-      <p class="section-lede">After every shot, Crema picks one change for the next — from how it tasted, how it ran, your basket, and your best shot so far. It runs on your device.</p>
-    </div>
-
-    <div class="coach-grid">
-      <div class="ui-card reveal">
-        <div class="ui-eyebrow">Dial-in coach</div>
-        <div class="coach-headline"><span class="coach-ico">↘</span> Grind finer — 16 → 15</div>
-        <p class="coach-why">Sour and fast (22s against a 30s target). Closing the grind slows the flow and pulls more sweetness.</p>
-        <div class="axis">
-          <div class="axis-row"><span>Sour</span><div class="axis-bar"><i style="left:22%"></i></div><span>Bitter</span></div>
-          <div class="axis-row"><span>Thin</span><div class="axis-bar"><i style="left:40%"></i></div><span>Heavy</span></div>
-        </div>
-        <div class="coach-also">Also suggests ratio, pre-infusion, dose for your basket, puck prep, or temperature.</div>
-      </div>
-
-      <div class="ui-card reveal reveal-delay-1">
-        <div class="ui-eyebrow">Starting point · new bag</div>
-        <h3 class="ui-h">Don't start from zero.</h3>
-        <p class="coach-why">From your best shots on similar coffee — same coffee, same roaster, or same roast.</p>
-        <div class="start-row">
-          <div><small>Dose</small><b>18.0 g</b></div>
-          <div><small>Ratio</small><b>1:2.0</b></div>
-          <div><small>Time</small><b>32 s</b></div>
-          <div><small>Grind</small><b>16</b></div>
-        </div>
-        <div class="coach-also">The brew timer and Quick log start right here.</div>
-      </div>
-
-      <div class="ui-card reveal reveal-delay-2">
-        <div class="ui-eyebrow">Dial-in path</div>
-        <h3 class="ui-h">See the walk to the sweet spot.</h3>
-        <div class="path">
-          <span class="path-step bad">sour<em>grind 18</em></span>
-          <span class="path-arrow">→</span>
-          <span class="path-step mid">sour<em>grind 17</em></span>
-          <span class="path-arrow">→</span>
-          <span class="path-step good">balanced<em>grind 16</em></span>
-        </div>
-        <div class="coach-also">Every claim shows how many shots it's based on.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INSIGHTS / SWEET SPOT -->
-<section id="insights">
-  <div class="container">
-    <div class="insights">
-      <div class="insights-grid">
-        <div>
-          <span class="section-eyebrow">Insights</span>
-          <h2 class="section-h2">Your <em>sweet spot</em>, plotted.</h2>
-          <p class="section-lede">Crema reads your library and surfaces the patterns you'd never spot in a spreadsheet — a freshness curve with the best rest window per roaster, cost per shot, weekly consistency, and where your grind clusters when the rating spikes. Compare any two beans side by side.</p>
-
-          <div class="insight-tips">
-            <div class="tip">
-              <span class="bulb" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2v.3h6v-.3c0-.7.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
-              </span>
-              <div><b>Best time on this bean was 34.0s</b> — speed up extraction by loosening grind.</div>
-            </div>
-            <div class="tip">
-              <span class="bulb" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2v.3h6v-.3c0-.7.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
-              </span>
-              <div><b>This bag is 39 days off roast</b> — flavor may be flattening. Grind a touch finer to compensate.</div>
-            </div>
-            <div class="tip">
-              <span class="bulb" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2v.3h6v-.3c0-.7.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
-              </span>
-              <div><b>Your shots rate higher 8–21 days off roast.</b> Try resting fresh bags before pulling.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal">
-          <div class="scatter-card">
-            <div class="scatter-head">
-              <div class="scatter-title">Sweet-spot overlay</div>
-              <div class="scatter-sub">grind vs rating</div>
-            </div>
-
-            <svg class="scatter-svg" id="scatterSvg" viewBox="0 0 360 240" aria-label="Sweet-spot scatter chart comparing two beans on grind size versus rating">
-              <!-- grid -->
-              <g stroke="#E4DCC9" stroke-width="1" stroke-dasharray="2 4">
-                <line x1="30" y1="40" x2="340" y2="40"/>
-                <line x1="30" y1="100" x2="340" y2="100"/>
-                <line x1="30" y1="160" x2="340" y2="160"/>
-                <line x1="100" y1="20" x2="100" y2="200"/>
-                <line x1="170" y1="20" x2="170" y2="200"/>
-                <line x1="240" y1="20" x2="240" y2="200"/>
-                <line x1="310" y1="20" x2="310" y2="200"/>
-              </g>
-              <!-- axes labels -->
-              <g font-family="Inter,sans-serif" font-size="10" fill="#6E665A">
-                <text x="345" y="44" text-anchor="start">10</text>
-                <text x="345" y="104" text-anchor="start">5</text>
-                <text x="345" y="204" text-anchor="start">0</text>
-                <text x="30" y="218" text-anchor="middle">0</text>
-                <text x="100" y="218" text-anchor="middle">5</text>
-                <text x="170" y="218" text-anchor="middle">10</text>
-                <text x="240" y="218" text-anchor="middle">15</text>
-                <text x="310" y="218" text-anchor="middle">20</text>
-              </g>
-              <!-- Bean A: Ethiopia (orange circles) -->
-              <g fill="#B85C2E">
-                <circle class="scatter-dot" cx="225" cy="60" r="7" style="animation-delay:.05s"/>
-                <circle class="scatter-dot" cx="195" cy="70" r="7" style="animation-delay:.10s"/>
-                <circle class="scatter-dot" cx="210" cy="78" r="7" style="animation-delay:.15s"/>
-                <circle class="scatter-dot" cx="245" cy="75" r="7" style="animation-delay:.20s"/>
-                <circle class="scatter-dot" cx="175" cy="100" r="6" style="animation-delay:.25s"/>
-                <circle class="scatter-dot" cx="255" cy="92" r="6" style="animation-delay:.30s"/>
-              </g>
-              <!-- Bean B: S Chocolate (teal squares) -->
-              <g fill="#2F7A75">
-                <rect class="scatter-dot" x="125" y="64" width="13" height="13" rx="2" style="animation-delay:.40s"/>
-                <rect class="scatter-dot" x="145" y="86" width="12" height="12" rx="2" style="animation-delay:.46s"/>
-                <rect class="scatter-dot" x="130" y="98" width="11" height="11" rx="2" style="animation-delay:.52s"/>
-                <rect class="scatter-dot" x="160" y="92" width="12" height="12" rx="2" style="animation-delay:.58s"/>
-                <rect class="scatter-dot" x="170" y="106" width="10" height="10" rx="2" style="animation-delay:.64s"/>
-                <rect class="scatter-dot" x="85"  y="148" width="11" height="11" rx="2" style="animation-delay:.70s"/>
-              </g>
-              <!-- highlight cluster circles -->
-              <g fill="none" stroke="#B85C2E" stroke-dasharray="3 3" opacity=".35">
-                <ellipse class="scatter-dot" cx="215" cy="78" rx="42" ry="22" style="animation-delay:.78s"/>
-              </g>
-              <g fill="none" stroke="#2F7A75" stroke-dasharray="3 3" opacity=".35">
-                <ellipse class="scatter-dot" cx="142" cy="92" rx="36" ry="24" style="animation-delay:.86s"/>
-              </g>
-            </svg>
-
-            <div class="scatter-legend">
-              <span><i style="background:#B85C2E"></i> Ethiopia Yirgacheffe</span>
-              <span><i style="background:#2F7A75;border-radius:2px"></i> S Chocolate</span>
-            </div>
-            <p class="scatter-caption">Bigger marks mean higher ratings. Where each bean's marks cluster on the X-axis is its grind sweet spot.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- EVERYWHERE (1.8) -->
-<section class="everywhere" id="everywhere">
-  <div class="container">
-    <div class="reveal" style="max-width:40ch">
-      <span class="section-eyebrow">Wrist, Lock Screen &amp; voice</span>
-      <h2 class="section-h2">Pull a shot <em>without the phone</em>.</h2>
-      <p class="section-lede">Crema now lives where your hands are: Apple Watch, widgets, Control Center, and Siri.</p>
-    </div>
-
-    <div class="every-grid">
-      <div class="watch-wrap reveal">
-        <div class="watch" role="img" aria-label="Apple Watch showing the Crema brew timer">
-          <div class="watch-screen">
-            <div class="w-top">Target 18 → 36 g</div>
-            <div class="w-time">28.4</div>
-            <div class="w-sub">PULLING · 1:1.8</div>
-            <div class="w-ring"><i></i></div>
-            <div class="w-btn">Stop</div>
-          </div>
-        </div>
-        <ul class="feature-bullets">
-          <li>Timer with haptic checkpoints that keep going with your wrist down</li>
-          <li>Set the yield with the Digital Crown, rate the shot — it lands in your iPhone log</li>
-          <li>Watch-face complications: days off roast, maintenance due</li>
-        </ul>
-      </div>
-
-      <div class="widgets reveal reveal-delay-1">
-        <div class="widget">
-          <small>In the hopper</small>
-          <h4>Ethiopia Yirgacheffe</h4>
-          <div class="widget-meta"><span>21d off roast</span><span>~14 left</span></div>
-          <div class="widget-next">✓ Keep grind 16</div>
-          <div class="widget-btns"><span class="pill pri">Pull a shot</span><span class="pill">Log again</span></div>
-        </div>
-        <div class="widget la">
-          <small>Live Activity · Dynamic Island</small>
-          <div class="la-row"><b>00:28</b><span>Target 18 → 36 g in 32 s</span></div>
-          <div class="la-bar"><i></i></div>
-        </div>
-        <div class="siri">
-          <small>Siri &amp; Shortcuts</small>
-          <p>“Tell Crema about my shot: 18 in, 40 out, 32 seconds, a bit bitter.”</p>
-          <p>“Repeat my last shot in Crema.”</p>
-          <p>“How should I dial in with Crema?”</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DETAIL + PRIVACY (1.8) -->
-<section class="details" id="details">
-  <div class="container details-grid">
-    <div class="reveal">
-      <span class="section-eyebrow">Everything a barista tracks</span>
-      <h2 class="section-h2">The small stuff, <em>captured</em>.</h2>
-      <div class="chips" style="margin-top:var(--space-6)">
-        <span class="chip active">Pre-infusion</span><span class="chip">Basket</span><span class="chip">Puck prep</span><span class="chip">Drink type</span><span class="chip">Water</span><span class="chip">Grinder zero point</span><span class="chip">Freezer time</span><span class="chip">Bag price</span><span class="chip">Backflush &amp; descale reminders</span><span class="chip">Burr-wear tracking</span>
-      </div>
-      <p class="feature-p" style="margin-top:var(--space-6)">Share any recipe as a link or QR code. Import from a supported export file, and back everything up — photos included — in one file, or export CSV.</p>
-    </div>
-    <div class="privacy-card reveal reveal-delay-1">
-      <span class="section-eyebrow">Private by design</span>
-      <h3 class="feature-h" style="max-width:16ch">No account. No tracking.</h3>
-      <p class="feature-p">Your log syncs through your own private iCloud, or stays on your device. No analytics, no servers, no sign-in — the coach runs on your device. Every feature is free; an optional tip jar keeps Crema independent.</p>
-    </div>
-  </div>
-</section>
-
-<!-- EQUIPMENT -->
-<section class="equipment" id="equipment">
-  <div class="container equipment-grid">
-    <div class="reveal">
-      <div class="phone tilt phone-scroll-tilt phone-bigger">
-        <div class="phone-screen">
-          <img src="./assets/screens/equipment_store.jpg" alt="Crema Equipment screen listing the Breville Bambino Plus and Flair 58 machines and the Niche Zero and 1Zpresso K-Ultra grinders" loading="lazy">
-        </div>
-      </div>
-    </div>
-    <div class="reveal reveal-delay-1">
-      <span class="section-eyebrow">Equipment</span>
-      <h2 class="section-h2">Built around <em>your</em> setup.</h2>
-      <p class="section-lede">Crema knows the difference between a Niche Zero clicking from 10 to 16 and a Varia VS6 humming at 1,000 rpm. Pick a preset or set up your grinder once — units, ranges, burrs, RPM — and every shot logs against it.</p>
-
-      <div class="equipment-list">
-        <div class="equip-tile">
-          <small>Grinder</small>
-          <h4>Varia VS6</h4>
-          <p>0–80, step 1 · 600–1,600 rpm · SSP Brew burrs</p>
-        </div>
-        <div class="equip-tile">
-          <small>Grinder</small>
-          <h4>Niche Zero</h4>
-          <p>0–50 dial · single dose · stock burrs</p>
-        </div>
-        <div class="equip-tile">
-          <small>Machine</small>
-          <h4>Breville Bambino+</h4>
-          <p>9 bar · 93°C · 18→36g in 30s</p>
-        </div>
-        <div class="equip-tile">
-          <small>Machine</small>
-          <h4>Flair 58</h4>
-          <p>Manual lever · pressure profiled</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="container">
-    <span class="section-eyebrow reveal">Coffee, measured</span>
-    <h2 class="reveal reveal-delay-1">Stop guessing. <em>Start dialing</em>.</h2>
-    <p class="section-lede reveal reveal-delay-2" style="margin-inline:auto">Bring your beans, your gear, and your taste — Crema will tell you what to try next.</p>
-
-    <div class="hero-ctas reveal reveal-delay-3">
-      <a class="btn-app" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer">
-        <svg class="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM260 116c25.6-30.4 23.3-58 22.5-67.9-22.6 1.3-48.7 15.4-63.6 32.7-16.4 18.5-26.1 41.4-24 67.4 24.4 1.9 46.7-10.6 65.1-32.2z"/></svg>
-        <span><span class="small">Download on the</span><span class="big">App Store</span></span>
-      </a>
-    </div>
-
-    <div class="signoff">Your espresso coach · iPhone, iPad &amp; Apple Watch</div>
+<!-- ============ PRIVATE + CTA ============ -->
+<section class="private" aria-labelledby="priv-h">
+  <div class="wrap">
+    <h2 id="priv-h" class="statement">No account. No tracking. No price.</h2>
+    <p>Your log syncs through your own private iCloud, or stays on your device. There are no servers, no analytics and no sign-in. Every feature is free, and an optional tip jar keeps Crema independent.</p>
+    <p class="platforms">iPhone, foldable iPhone, iPad, Apple Watch and Apple silicon Mac. In 11 languages.</p>
+    <a class="btn-app big" href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer" aria-label="Download Crema on the App Store">
+      <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM260 116c25.6-30.4 23.3-58 22.5-67.9-22.6 1.3-48.7 15.4-63.6 32.7-16.4 18.5-26.1 41.4-24 67.4 24.4 1.9 46.7-10.6 65.1-32.2z"/></svg>
+      <span><small>Download on the</small>App Store</span>
+    </a>
   </div>
 </section>
 
 </main>
 
 <footer class="foot">
-  <div class="container">
-    <span>© 2026 Crema · Built by Zhifan Liang</span>
-    <span><a href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer">View on the App Store →</a></span>
-  </div>
+  <span>© 2026 Crema. Built by Zhifan Liang.</span>
+  <a href="https://apps.apple.com/us/app/crema-coffee-brewing-log/id6768115466" target="_blank" rel="noopener noreferrer">View on the App Store</a>
 </footer>
 
 <script src="./app.js" defer></script>
